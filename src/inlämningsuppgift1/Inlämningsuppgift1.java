@@ -5,32 +5,31 @@ import javax.swing.JOptionPane;
 
 public class Inlämningsuppgift1 {
     
-    public static void skrivDjur(ISkrivUt dj){ // Vi anropar printMe, måste skapas för att vi i case kan använda oss av SkrivUt
+    public static void skrivDjur(ISkrivUt dj){ 
        dj.printMe();
     }
     
     Inlämningsuppgift1(){
-    Djur Sixten = new Hund("Sixten", "hund",5000);  // Polymorfism. Vi refererar Djur. Vi kan inte skapa new Djur, eftersom djur är abstrakt.
-    // Sedan skapar vi en hund, som ör en klass i djur. Samma anrop ger olika resultat beroende på metoden. 
+    Djur Sixten = new Hund("Sixten", "hund",5000);// Polymorfism. Vi refererar till Djur (superklass) men skapar en ny Hund (subklass). 
     Djur Dogge = new Hund ("Dogge", "hund",10000); 
-    Katt Venus = new Katt("Venus", "katt", 3000);
-    Katt Ove = new Katt("Ove", "katt", 2000);
-    Orm Hypno = new Orm("Hypno", "orm", 1000);
+    Djur Venus = new Katt("Venus", "katt", 3000);
+    Djur Ove = new Katt("Ove", "katt", 2000);
+    Djur Hypno = new Orm("Hypno", "orm", 1000);
     
     String o = JOptionPane.showInputDialog(null, "Vem ska du mata?"); 
         
         switch (o) {
             case "Hypno":
-                skrivDjur(Hypno);
+                skrivDjur((ISkrivUt) Hypno);
                 break;
             case "Venus":
-                skrivDjur(Venus);
+                skrivDjur((ISkrivUt) Venus);
                 break;
             case "Ove":
-                skrivDjur(Ove);
+                skrivDjur((ISkrivUt) Ove);
                 break;
             case "Sixten": 
-                skrivDjur((ISkrivUt) Sixten); // Polymorfism 
+                skrivDjur((ISkrivUt) Sixten);
                 break;
             case "Dogge": 
                 skrivDjur((ISkrivUt) Dogge); 
