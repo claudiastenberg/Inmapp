@@ -1,11 +1,11 @@
 
 package inlämningsuppgift1;
 
-public abstract class Djur { 
-//Abstrakt, denna klass kan INTE skapa NYA objekt nu när den är abstrakt. Används som en mall för subklasser. 
+ abstract public class Djur { 
+
     
-    protected String namn; // Inkapsling sida 148
-    protected String sort;
+    protected String namn; //  Inkapsling, Vi använder protected eftersom vi vill kunna använda dessa variabler i subklasserna.
+    protected String sort;  
     protected double vikt; 
     
     Djur (String namn, String sort,double vikt) {
@@ -14,7 +14,7 @@ public abstract class Djur {
         this.vikt = vikt; 
     }    
     
-    public String getNamn () { // genom dessa publica metoder kommer vi åt protected variablerna 
+    public String getNamn () { 
         return namn; 
     }
     public String getSort (){
