@@ -13,8 +13,7 @@ public class Katt extends Djur implements ISkrivUt {
    return (int)vikt/150; 
    }
     
-   @Override //dynamisk bildning. När metoden anropas. Vid anrop hamnar den här, träff på första försöket, sedan går den uppåt 
-   // i metoderna, de är dynamisk dindning. 
+   @Override // Vid polymorfism, vid anrop hamnar den här för att "leta metoder". Detta är Dynamisk bindning.
     public void printMe() {
         JOptionPane.showMessageDialog(null, getNamn() + " är en " + getSort() 
                 + " som ska ha kattfoder, mängd: " + getDjurfodervikt() + " gram");
