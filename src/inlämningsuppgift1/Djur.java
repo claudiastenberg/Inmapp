@@ -4,7 +4,7 @@ package inlämningsuppgift1;
  abstract public class Djur { 
 
     
-    protected String namn; //  Inkapsling, Vi använder protected eftersom vi vill kunna använda dessa variabler i subklasserna.
+    protected String namn; //  Inkapsling, Vi använder protected eftersom vi vill att de ska vara synliga i subklasserna också. 
     protected String sort;  
     protected double vikt; 
     
@@ -25,4 +25,5 @@ package inlämningsuppgift1;
         return vikt; 
     } 
   
+    abstract public void printMe();
 }
