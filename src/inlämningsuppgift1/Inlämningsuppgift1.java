@@ -12,8 +12,8 @@ public class Inlämningsuppgift1 {
     Inlämningsuppgift1(){
     Djur Sixten = new Hund("Sixten", "hund",5000);// Polymorfism. Vi refererar till Djur (superklass) men skapar en ny Hund (subklass). 
     Djur Dogge = new Hund ("Dogge", "hund",10000); 
-    Djur Venus = new Katt("Venus", "katt", 3000);
-    Djur Ove = new Katt("Ove", "katt", 2000);
+    Djur Venus = new Katt("Venus", "katt", 5000);
+    Djur Ove = new Katt("Ove", "katt", 3000);
     Djur Hypno = new Orm("Hypno", "orm", 1000);
     
     String o = JOptionPane.showInputDialog(null, "Vem ska du mata?"); 
