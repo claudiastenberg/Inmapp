@@ -1,12 +1,15 @@
 
 package inlämningsuppgift1;
 
- abstract public class Djur { 
+ abstract class Djur implements ISkrivUt { 
 
     
-    protected String namn; //  Inkapsling, Vi använder protected eftersom vi vill att de ska vara synliga i subklasserna också. 
-    protected String sort;  
-    protected double vikt; 
+    private String namn; //  Inkapsling, Vi använder private. I subklassen kommer vi sedan behöva anropa metodennamn för att använda dessa
+    //variabler. 
+    private String sort;  
+    private double vikt; 
+    
+    Djur () {}
     
     Djur (String namn, String sort,double vikt) {
         this.namn = namn;
@@ -24,6 +27,7 @@ package inlämningsuppgift1;
     public double getVikt (){
         return vikt; 
     } 
-  
-    abstract public void printMe();
+    
+    @Override
+    public void printMe() {}
 }

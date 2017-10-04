@@ -10,7 +10,7 @@ public class Hund extends Djur implements ISkrivUt {
     }
    
     public double getDjurfodervikt() { 
-    return (int)vikt/100; 
+    return (int)getVikt()/100; 
     }
     
     @Override// Vid polymorfism, vid anrop hamnar den här för att "leta metoder". Detta är Dynamisk bindning.
